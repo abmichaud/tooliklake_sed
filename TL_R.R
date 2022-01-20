@@ -138,15 +138,15 @@ legend(0.25, -6.3, legend = c("Iron reducing", "Iron oxidizing", "Methane oxidiz
        col = c("darkred", "darkorange3", "blue2", "black"), pch=c(15,19,17,18), lty=c(3,3,3,3), 
        lwd=c(2,2,2,2), ncol=1, bty="n")
 
-plot(o2, geochem_depth, col="darkgreen", pch=17, ylim = c(-8,1.01), xlim = c(0, 310), axes=FALSE, ann=FALSE)
-lines(o2, geochem_depth, col="darkgreen", lty=3, lwd=2)
+plot(o2, geochem_depth, col="blue2", pch=15, ylim = c(-8,1.01), xlim = c(0, 310), axes=FALSE, ann=FALSE)
+lines(o2, geochem_depth, col="blue2", lty=3, lwd=2)
 xtick<-seq(0,300, by=100)
 axis(3, at=xtick)
 axis(2, las=2)
 mtext(expression(paste("Concentration (",mu,"M)")), side=3, line = 2.5)
 
-points(fe2, geochem_depth, col="darkred", pch=15)
-lines(fe2, geochem_depth, col="darkred", lty=3, lwd=2)
+points(fe2, geochem_depth, col="darkgreen", pch=17)
+lines(fe2, geochem_depth, col="darkgreen", lty=3, lwd=2)
 par(new = TRUE)
 plot(sfe, sfe_depth, col="darkorange3", pch=19, xlim = c(0, 70), ylim = c(-8, 1.01), xaxt = "n", yaxt = "n", 
      ylab = "", xlab = "", axes=FALSE, ann=FALSE)
@@ -156,8 +156,8 @@ axis(side = 1, at=x2tick)
 fe_xlab=expression(paste("Fe(III)-Oxides (",mu,"mole/gdw)"))
 mtext(fe_xlab, side = 1, line = 2.5)
 legend_fe = expression(paste("Fe(II)"))
-legend(10, -6.3, legend = c("Oxygen", legend_fe, "Fe(III)-Oxides"), col = c("darkgreen", "darkred", "darkorange3"), 
-       pch = c(17, 15, 19), lty = c(3,3), lwd = c(2,2), ncol = 1, bty = "n")
+legend(10, -6.3, legend = c("Oxygen", legend_fe, "Fe(III)-Oxides"), col = c("blue2", "darkgreen", "darkorange3"), 
+       pch = c(15, 17, 19), lty = c(3,3), lwd = c(2,2), ncol = 1, bty = "n")
 
 dev.off()
 
